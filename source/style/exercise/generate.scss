@@ -1,0 +1,38 @@
+.generate-main {
+  .generate {
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    position: relative;
+    left: 440px;
+    top: 50px;
+
+    .tag {
+      position: relative;
+      left: 170px;
+      top: 45px;
+    }
+
+    .number {
+      position: relative;
+      left: 170px;
+      top: 65px;
+
+      input {
+        width: 50px;
+      }
+    }
+
+    .button {
+      position: relative;
+      left: 170px;
+      top: 85px;
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+  }
+}
+

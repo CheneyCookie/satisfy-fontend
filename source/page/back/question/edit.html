@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../../../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../../../style/public/style.css">
+  <link rel="stylesheet" href="../../../../style/back/question/edit.css">
+  <script src="../../../../js/lib/requirejs/require.js" data-main="../../../../js/config/back/question/edit.js"></script>
+</head>
+<body>
+  <div class="question-edit">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+    <div ng-controller="questionEditController as edit">
+      <ol class="breadcrumb">
+        <li><a href="#">首页</a></li>
+        <li class="active">创建问题</li>
+      </ol>
+
+      <div class="type-tab">
+        <div class="tabbable" id="tabs-295623">
+          <ul class="nav nav-tabs">
+            <li class="active" ng-click="edit.changeSelect()">
+              <a href="#panel-537052" data-toggle="tab">选择题</a>
+            </li>
+            <li ng-click="edit.changeObject()">
+              <a href="#panel-802968" data-toggle="tab">主观题</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="panel-537052">
+              <div class="choice-question">
+                <div class="tag">
+                  <span class="tag-span">题型</span>
+                  <select ng-model="edit.tag" ng-options="type for type in edit.tags"></select>
+                </div>
+                <div class="title-module">
+                  <span class="question-title">题目</span>
+                  <textarea name="title" id="" cols="80" rows="4" ng-model="edit.question.title" ng-change="edit.validateTitle()"></textarea>
+                  <span class="error-tip" ng-bind="edit.titleError"></span>
+                </div>
+                <div class="option-module">
+                  <div class="answer">
+                    <input type="checkbox" name="option" ng-model="edit.a">
+                    <span>A</span>
+                    <textarea name="option" id="" cols="80" rows="2" ng-model="edit.answerA" ng-change="edit.validateAnswerA()"></textarea>
+                    <span class="error-tip" ng-bind="edit.answerAError"></span>
+                  </div>
+                  <div class="answer">
+                    <input type="checkbox" name="option" ng-model="edit.b">
+                    <span>B</span>
+                    <textarea name="option" id="" cols="80" rows="2" ng-model="edit.answerB" ng-change="edit.validateAnswerB()"></textarea>
+                    <span class="error-tip" ng-bind="edit.answerBError"></span>
+                  </div>
+                  <div class="answer">
+                    <input type="checkbox" name="option" ng-model="edit.c">
+                    <span>C</span>
+                    <textarea name="option" id="" cols="80" rows="2" ng-model="edit.answerC" ng-change="edit.validateAnswerC()"></textarea>
+                    <span class="error-tip" ng-bind="edit.answerCError"></span>
+                  </div>
+                  <div class="answer">
+                    <input type="checkbox" name="option" ng-model="edit.d">
+                    <span>D</span>
+                    <textarea name="option" id="" cols="80" rows="2" ng-model="edit.answerD" ng-change="edit.validateAnswerD()"></textarea>
+                    <span class="error-tip" ng-bind="edit.answerDError"></span>
+                  </div>
+                </div>
+                <div class="btn-module">
+                  <button class="btn btn-create" ng-click="edit.saveSelectQuestion()">{{edit.isCreate === true ? '创建' : '修改'}}</button>
+                  <button class="btn btn-cancel" ng-click="edit.cancel()">取消</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="panel-802968">
+              <p>
+                主观题内容.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-include src="'../../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>

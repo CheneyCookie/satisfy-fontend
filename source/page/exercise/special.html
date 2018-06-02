@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../style/public/style.css">
+  <link rel="stylesheet" href="../../style/exercise/special.css">
+  <script src="../../js/lib/requirejs/require.js" data-main="../../js/config/exercise/special.js"></script>
+</head>
+<body>
+  <div class="special">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+    <div ng-controller="specialController as special">
+      <div class="doExam">
+        <div class="top-title">
+          <span>[单选题]</span>
+        </div>
+        <form>
+        <div class="question-title">
+          <span>{{special.currentQuestion.title}}</span>
+        </div>
+        <div class="answer-option" ng-repeat="answer in special.currentQuestion.answers">
+          <input type="radio" value="{{$index+1}}" ng-disabled="special.hasSubmit" ng-model="special.currentQuestion.choiceAnswer">
+          <span>{{answer.content}}</span>
+        </div>
+        <div class="btn-div">
+          <span class="answer-title-span" ng-show="special.hasSubmit">正确答案: </span>
+          <span ng-repeat="answer in special.currentQuestion.answers" ng-show="special.hasSubmit" ng-if="answer.rightAnswer">{{$index + 1 | NumberToEngilsh}}</span>
+          <button class="btn btn-next" ng-click="special.nextQuestion()" ng-show="special.index<special.total-1">下一题</button>
+          <button class="btn btn-font" ng-click="special.submit()" ng-show="!special.hasSubmit">交卷</button>
+        </div>
+        </form>
+        <div class="exam-card">
+          <div class="card-top"><span>答题卡</span></div>
+          <div class="order">
+            <span class="card-span" ng-class="special.index === $index ? 'click-active' : 'click-unactive'" ng-repeat="questions in special.questions" ng-click="special.changeQuestion($index, $event)" ng-mouseenter="special.addColor($event)" ng-mouseleave="special.removeColor($event)">{{$index + 1}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-include src="'../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>

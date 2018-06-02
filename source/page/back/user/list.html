@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../../../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../../../style/public/style.css">
+  <link rel="stylesheet" href="../../../../style/back/user/list.css">
+  <script src="../../../../js/lib/requirejs/require.js" data-main="../../../../js/config/back/user/list.js"></script>
+</head>
+<body>
+  <div class="user-list">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+      <div ng-controller="userListController as list">
+        <ol class="breadcrumb">
+          <li><a href="#">首页</a></li>
+          <li class="active">用户列表</li>
+        </ol>
+        <div class="table-div">
+          <button class="btn btn-primary create-btn">新增</button>
+          <div class="col-lg-3 search-input">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+            </div>
+          </div>
+          <table ng-table="list.tableParams" class="table table-condensed table-bordered table-striped">
+            <tr ng-repeat="row in $data">
+              <td data-title="'用户名'" sortable="'name'">{{row.username}}</td>
+              <td data-title="'邮箱'" sortable="'email'">{{row.email}}</td>
+              <td data-title="'生日'" sortable="'birthday'">{{row.birthday | date:'yyyy-MM-dd'}}</td>
+              <td data-title="'创建时间'" sortable="'createTime'">{{row.createTime | date:'yyyy-MM-dd'}}</td>
+              <td class="option">
+                <a href="/page/back/user/edit?id={{row.id}}"><span title="编辑" class="glyphicon glyphicon-pencil icon"></span></a>
+                <span title="删除" class="glyphicon glyphicon-trash icon"></span>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    <ng-include src="'../../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>

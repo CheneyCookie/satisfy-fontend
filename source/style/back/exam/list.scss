@@ -1,0 +1,51 @@
+.exam-list {
+  .table-div {
+    width: 90%;
+    margin-left: 5%;
+
+    .pagination {
+      margin: 0;
+    }
+
+    .ng-table {
+      .sortable {
+        cursor: pointer;
+      }
+
+      th {
+        text-align: center;
+      }
+
+      td {
+        text-align: center;
+      }
+    }
+
+    .search-input {
+      position: relative;
+      left: 925px;
+      margin-bottom: 15px;
+    }
+
+    .create-btn {
+      position: relative;
+      left: 550px;
+    }
+
+    .option {
+      width: 10%;
+
+      .icon {
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+  }
+}

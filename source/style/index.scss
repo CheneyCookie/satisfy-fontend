@@ -1,0 +1,82 @@
+$picMoveColor: #cccccc;
+$gray: gray;
+$boxShadow: #888888;
+$aaa: #aaaaaa;
+$white: #ffffff;
+
+.index {
+  .module-head {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px dotted $aaa;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    .home-mod-tip {
+      color: $aaa;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+  }
+
+  .module-body {
+    position: relative;
+    left: 10%;
+    width: 80%;
+    padding: 30px;
+
+    ul {
+      list-style: none;
+    }
+
+    .content-item-box {
+      li {
+        width: 200px;
+        float: left;
+        margin-right: 40px;
+        margin-top: 20px;
+      }
+
+      .content-item-brief {
+        display: block;
+        padding: 10px;
+        max-width: 0 0 15px;
+        position: relative;
+        border: 1px solid #ebebeb;
+        border-radius: 3px;
+        text-align: center;
+        background-color: $white;
+        padding-top: 20px;
+
+        h1 {
+          width: 185px;
+          display: table-cell;
+          text-align: center;
+          vertical-align: middle;
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 15px;
+          overflow: hidden;
+          font-weight: 400;
+        }
+
+        .web-logoimg {
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
+
+        .btn {
+          margin: 0 auto;
+          background: #00B091;
+          display: block;
+          color: $white;
+        }
+      }
+    }
+  }
+}

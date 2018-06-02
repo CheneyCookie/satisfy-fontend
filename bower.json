@@ -1,0 +1,28 @@
+{
+  "name": "satisfy",
+  "description": "satisfy web",
+  "main": "",
+  "authors": [
+    "cheneychen"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.9",
+    "jquery": "^3.3.1",
+    "requirejs": "^2.3.5",
+    "angular-route": "^1.6.9",
+    "angular-resource": "^1.6.9",
+    "ng-table": "^1.0.0"
+  },
+  "dependencies": {
+    "popper.js": "^1.14.1"
+  }
+}

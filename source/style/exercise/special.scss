@@ -1,0 +1,98 @@
+.special {
+  .doExam {
+    position: relative;
+    width: 70%;
+    background-color: #fff;
+    left: 15%;
+
+    .top-title {
+      position: relative;
+      height: 45px;
+      line-height: 45px;
+      padding-left: 45px;
+      font-size: 22px;
+    }
+
+    .question-title {
+      border: 1px solid rgb(228, 224, 224);
+      margin: 15px;
+      margin-bottom: 30px;
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    .answer-option {
+      border: 1px solid rgb(209, 204, 204);
+      margin: 12px;
+      margin-left: 15px;
+      margin-right: 15px;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .btn-div {
+      position: relative;
+      height: 60px;
+
+      .btn-next {
+        background-color: rgb(104, 93, 93);
+        color: #fff;
+      }
+
+      .btn-font {
+        background-color: rgb(151, 98, 89);
+        color: #fff;
+      }
+
+      .answer-title-span {
+        margin: 15px;
+      }
+
+      button {
+        position: relative;
+        float: right;
+        margin: 15px;
+        width: 82px;
+      }
+    }
+
+    .exam-card {
+      background-color: rgba(144, 173, 143, 0.5);
+      height: 100px;
+      margin-bottom: 50px;
+
+      .card-top {
+        position: relative;
+        top: 15px;
+        margin: 20px;
+        font-size: 15px;
+      }
+
+      .order {
+        height: 40px;
+        background-color: #fff;
+
+        span {
+          width: 40px;
+          height: 40px;
+          font-size: 18px;
+          display: inline-block;
+          text-align: center;
+          line-height: 40px;
+          cursor: pointer;
+          margin-left: 5px;
+          margin-right: 5px;
+          border: 1px solid rgb(238, 229, 229);
+        }
+
+        .on-active {
+          background-color: rgb(151, 150, 207);
+        }
+
+        .click-active {
+          background-color: rgb(151, 150, 207);
+        }
+      }
+    }
+  }
+}

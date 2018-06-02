@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../style/public/style.css">
+  <link rel="stylesheet" href="../../style/exercise/generate.css">
+  <script src="../../js/lib/requirejs/require.js" data-main="../../js/config/exercise/generate.js"></script>
+</head>
+<body>
+  <div class="generate-main">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+    <div class="generate" ng-controller="generateController as generate">
+      <div class="tag">
+        <span class="tag-span">题目类型</span>
+        <select ng-model="generate.tag" ng-options="type for type in generate.tags"></select>
+      </div>
+      <div class="number">
+        <span class="number-span">题目数量</span>
+        <input type="number" min="1" ng-model="generate.number">
+      </div>
+      <div class="button">
+        <button class="btn btn-create" ng-click="generate.generate()">生成</button>
+        <a href="http://www.satisfy.com"><button class="btn btn-cancel" ng-click="">取消</button></a>
+      </div>
+    </div>
+    <ng-include src="'../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>

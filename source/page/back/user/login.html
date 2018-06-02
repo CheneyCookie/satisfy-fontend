@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../style/public/style.css">
+  <link rel="stylesheet" href="../../style/user/login.css">
+  <script src="../../js/lib/requirejs/require.js" data-main="../../js/config/user/login.js"></script>
+</head>
+<body>
+  <div class="login">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+    <div ng-controller="loginController as login">
+      <div class="panel panel-default col-xs-3 login-form">
+        <div class="panel-heading row">
+          <h4 class="text-center text-primary">登录</h4>
+        </div>
+        <div class="panel-body">
+            <div class="form-group input-group">
+              <span class="input-group-addon"><img src="../../image/user/account.png" alt="" /></span>
+              <input type="text" class="form-control input-lg" name="username" ng-model="login.username" placeholder="用户名/email" />
+            </div>
+            <div class="form-group input-group">
+              <span class="input-group-addon"><img src="../../image/user/password.png" alt="" /></span>
+              <input type="password" class="form-control input-lg" ng-model="login.password" placeholder="用户密码" />
+            </div>
+            <div class="form-group">
+              <input type="checkbox"/>七天内自动登录
+              <div class=" form-group pull-right"><span><a href="#">忘记密码</a></span><span> | </span><span><a href="register.html">立即注册</a></span></div>
+              <button class="btn btn-primary btn-lg btn-block" ng-click="login.login()">立即登录</button>
+            </div>
+        </div>
+        <div class="panel-footer row">
+          <h4 class="text-center text-primary">请注意您的密码安全</h4>
+        </div>
+      </div>
+    </div>
+    <ng-include src="'../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>

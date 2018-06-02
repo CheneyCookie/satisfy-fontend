@@ -1,0 +1,80 @@
+$background:#fdf1f1;
+$white: #ffffff;
+$black: #000000;
+$borderColor: #252525;
+$navbarColor: #d4d4d4;
+$darkgray: darkgray;
+
+body {
+  background-color: $background;
+  border: none;
+  margin: 0;
+  font-family: 'Arial';
+}
+
+.header {
+  .navbar {
+    padding: 0;
+    border: none;
+
+    .container-fluid {
+      background-color: $black;
+
+      .navbar-brand {
+        margin-left: 80px;
+        color: $white;
+        font-size: 28px;
+      }
+
+      .navbar-nav {
+        margin-left: 100px;
+        color: $white;
+      }
+
+      .navbar-right {
+        margin-right: 50px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 100px;
+  }
+}
+
+.footer {
+  padding: 25px;
+  color: $darkgray;
+  background-color: $white;
+  text-align: center;
+  width: 100%;
+}
+
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.breadcrumb {
+  margin-left: 30px;
+}
+
+.btn-create {
+  background-color: #787aa7;
+  color: #ffffff;
+  width: 80px;
+}
+
+.btn-cancel {
+  background-color: #d4bfbf;
+  color: #ffffff;
+  width: 80px;
+}
+
+.hidden {
+  display: none;
+}

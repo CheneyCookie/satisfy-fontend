@@ -1,0 +1,106 @@
+.question-edit {
+  .type-tab {
+    position: relative;
+    width: 76%;
+    left: 12%;
+
+    textarea {
+      outline: none;
+      resize: none;
+      border-radius: 4px;
+    }
+
+    .tag {
+      position: relative;
+      margin-bottom: 10px;
+
+      select {
+        position: relative;
+        left: 20px;
+      }
+    }
+
+    .tab-pane {
+      margin: 20px;
+
+      .choice-question {
+        position: relative;
+        width: 80%;
+        left: 17%;
+
+        .title-module {
+          position: relative;
+
+          .question-title {
+            position: relative;
+            bottom: 70px;
+          }
+
+          textarea {
+            position: relative;
+            left: 20px;
+          }
+        }
+
+        .option-module {
+          position: relative;
+
+          .answer {
+            position: relative;
+            top: 15px;
+
+            span,input {
+              position: relative;
+              bottom: 30px;
+              font-size: 18px;
+            }
+
+            textarea {
+              position: relative;
+              left: 20px;
+            }
+
+            .error-tip {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .btn-module {
+          position: relative;
+          top: 50px;
+
+          .btn-create {
+            background-color: #787aa7;
+            color: #ffffff;
+            width: 80px;
+            position: relative;
+            left: 200px;
+          }
+
+          .btn-cancel {
+            background-color: #d4bfbf;
+            color: #ffffff;
+            width: 80px;
+            position: relative;
+            left: 320px;
+          }
+        }
+
+        .error-tip {
+          position: relative;
+          color: red;
+          font-size: 14px;
+          left: 24px;
+          top: -10px;
+        }
+      }
+    }
+  }
+
+
+  .footer {
+    position: relative;
+    top: 60px;
+  }
+}

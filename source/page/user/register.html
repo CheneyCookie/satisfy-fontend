@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../style/public/style.css">
+  <link rel="stylesheet" href="../../style/user/register.css">
+  <script src="../../js/lib/requirejs/require.js" data-main="../../js/config/user/register.js"></script>
+</head>
+<body>
+  <div class="register">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+    <div ng-controller="registerController as register">
+      <div class="panel panel-default col-xs-3 register-form">
+        <div class="panel-heading row">
+          <h4 class="text-center text-primary">注册</h4>
+        </div>
+        <div class="panel-body">
+          <div class="form-group input-group">
+            <span class="input-group-addon"><img src="../../image/user/iconfont-shouji.png" alt="" /></span>
+            <input type="text" class="form-control input-lg" placeholder="请输入您的邮箱" ng-model="register.email" ng-change="register.validateEmailInput()" ng-blur="register.validateLeaveEmail()"/>
+          </div>
+          <div class="email-tip error-tip">{{register.emailError}}</div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><img src="../../image/user/password.png"/></span>
+            <input type="password" class="form-control input-lg" placeholder="密码 8~16位" ng-model="register.password" ng-change="register.validatePasswprdInput()" ng-blur="register.validateLeavePassword()"/>
+          </div>
+          <div class="password-tip error-tip">{{register.passwordError}}</div>
+          <div class="form-group input-group">
+            <span class="input-group-addon"><img src="../../image/user/password.png"/></span>
+            <input type="password" class="form-control input-lg" placeholder="重复密码" ng-model="register.rePassword" ng-change="register.validateRePasswprdInput()" ng-blur="register.validateLeaveRePasswprd()"/>
+          </div>
+          <div class="rePassword-tip error-tip">{{register.rePasswordError}}</div>
+          <!-- <div class="form-group input-group">
+            <span class="input-group-addon"><img src="../../image/user/all.png" alt="" /></span>
+            <input type="text" class="form-control input-lg" name="verify" placeholder="验证码" style="width: 60%;"/>
+          </div> -->
+          <div class="form-group pull-right">
+            <span>已有账号？ </span><a href="login.html">返回登录</a>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary btn-lg btn-block" ng-click="register.register()">立即注册</button>
+          </div>
+        </div>
+        <div class="panel-footer row">
+          <h4 class="text-center text-primary">请注意您的密码安全</h4>
+        </div>
+      </div>
+    </div>
+    <ng-include src="'../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>

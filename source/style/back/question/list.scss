@@ -1,0 +1,95 @@
+.question-list {
+  .table-div {
+    width: 90%;
+    margin-left: 5%;
+
+    .pagination {
+      margin: 0;
+    }
+
+    .ng-table {
+      table-layout: fixed;
+
+      .sortable {
+        cursor: pointer;
+      }
+
+      th {
+        text-align: center;
+      }
+
+      td {
+        text-align: center;
+      }
+
+      .title {
+        width: 50%;
+        height: 30px;
+        white-space: pre-wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .type {
+        width: 20%
+      }
+
+      .time {
+        width: 20%
+      }
+
+      .option {
+        width: 10%
+      }
+    }
+
+    .search-input {
+      position: relative;
+      left: 925px;
+      margin-bottom: 15px;
+    }
+
+    .create-btn {
+      position: relative;
+      left: 550px;
+    }
+
+    .option {
+      width: 10%;
+
+      .icon {
+        margin-left: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  .delete-tip {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 25%;
+    background-color: rgb(226, 241, 215);
+
+    span {
+      position: absolute;
+      left: 33%;
+      top: 20%;
+      font-size: 20px;
+    }
+
+    .btn-div {
+      position: relative;
+      top: 60%;
+      left: 32%;
+    }
+  }
+
+  .footer {
+    position: relative;
+    top: 140px;
+  }
+}

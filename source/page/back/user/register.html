@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../js/lib/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../../style/public/style.css">
+  <link rel="stylesheet" href="../../style/user/register.css">
+  <script src="../../js/lib/requirejs/require.js" data-main="../../js/config/user/register.js"></script>
+</head>
+<body>
+  <div class="register">
+    <ng-include src="'../header.html'" onload="expression" autoscroll="expression"></ng-include>
+    <div ng-controller="registerController">
+      <div class="panel panel-default col-xs-3 register-form">
+        <div class="panel-heading row">
+          <h4 class="text-center text-primary">注册</h4>
+        </div>
+        <div class="panel-body">
+          <form action="" method="post" class="form col-xs-12 center-block">
+            <div class="form-group input-group">
+              <span class="input-group-addon"><img src="../../image/user/iconfont-shouji.png" alt="" /></span>
+              <input type="text" class="form-control input-lg" name="phoneNum" placeholder="请输入您的邮箱" />
+            </div>
+            <div class="form-group input-group">
+              <span class="input-group-addon"><img src="../../image/user/password.png"/></span>
+              <input type="password" class="form-control input-lg" placeholder="密码" />
+            </div>
+            <div class="form-group input-group">
+              <span class="input-group-addon"><img src="../../image/user/password.png"/></span>
+              <input type="password" class="form-control input-lg" placeholder="重复密码" />
+            </div>
+            <!-- <div class="form-group input-group">
+              <span class="input-group-addon"><img src="../../image/user/all.png" alt="" /></span>
+              <input type="text" class="form-control input-lg" name="verify" placeholder="验证码" style="width: 60%;"/>
+            </div> -->
+            <div class="form-group pull-right">
+              <span>已有账号？ </span><a href="login.html">返回登录</a>
+            </div>
+          </form>
+        </div>
+        <div class="panel-footer row">
+          <h4 class="text-center text-primary">请注意您的密码安全</h4>
+        </div>
+      </div>
+    </div>
+    <ng-include src="'../footer.html'" onload="expression" autoscroll="expression"></ng-include>
+  </div>
+</body>
+</html>
